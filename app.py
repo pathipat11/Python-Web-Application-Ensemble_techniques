@@ -5,10 +5,10 @@ import joblib
 app = Flask(__name__)
 
 # โหลดโมเดลที่บันทึกไว้
-model = joblib.load('Ensemble_Model.pkl')
+model = joblib.load('./model/Ensemble_Model.pkl')
 
 # โหลดข้อมูลจาก CSV
-employee_data = pd.read_csv('data.csv')
+employee_data = pd.read_csv('./data/data.csv')
 
 @app.route('/')
 def home():
